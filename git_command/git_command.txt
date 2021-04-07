@@ -1,0 +1,80 @@
+git --version
+配置user信息
+git config --global user.name 'lhw'
+git config --global user.email 'lhw@163.com'
+------------------------------------------------
+config的三个作用域
+缺省等同于local
+git config --local 只对某个仓库有效
+git config --global 对当前用户所有仓库有效
+git config --system 对系统所有登录的用户有效
+
+显示config的配置，加 --list
+git config --list --local
+git config --list --global
+git config --list --system
+------------------------------------------------
+建git仓库
+两种场景：
+1.把已有的项目代码纳入git管理
+cd 项目代码所在文件夹
+git init
+
+2.新建的项目直接使用git管理
+cd 某个新建文件夹
+git init your_project
+cd your_project
+------------------------------------------------
+往仓库里添加文件
+git status 查看文件状态
+git add index.html image 可以将多个文件添加到暂存区
+git commit -m'Add index.html' 提交文件
+------------------------------------------------
+给文件重命名的简单方法
+git mv readme.txt readme.md
+------------------------------------------------
+查看版本演变历史
+git log
+git log --oneline
+git log -n3 --oneline 查看最近3次
+git log --oneline --all --graph
+
+git branch -av 看分支
+git branch -D tmp 删除不需要的分支
+------------------------------------------------
+gitk
+------------------------------------------------
+git checkout master 切换分支
+------------------------------------------------
+commit  tree  blob
+git cat-file -t 7b598021f5 看对象类型
+git cat-file -p 7b598021f5 看对象内容
+------------------------------------------------
+分离头指针 HEAD
+------------------------------------------------
+查看所有远程仓库 git remote -v
+添加远程版本库
+git remote add github git@github.com:Liu-23/git_learning.git
+提交到github
+git push github --all
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
