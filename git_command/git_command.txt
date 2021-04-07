@@ -52,11 +52,13 @@ git cat-file -p 7b598021f5 看对象内容
 ------------------------------------------------
 分离头指针 HEAD
 ------------------------------------------------
-查看所有远程仓库 git remote -v
+查看所有远程仓库 
+git remote -v
 添加远程版本库
 git remote add github git@github.com:Liu-23/git_learning.git
 提交到github
 git push github --all
+------------------------------------------------
 
 
 
